@@ -1,14 +1,16 @@
-[{
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [37.800201, -78.50162]
-    },
-    "properties": {
-        "title": "Belle Haven",
-        // http://mapbox.com/developers/simplestyle/
-        "marker-color": "#CC0033",
-        "marker-size": "medium",
-        "marker-symbol": "building"
+{
+    "type": "FeatureCollection",
+    "features": {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [37.800201, -78.50162]
+        },
+        "properties": {
+            "title": "Belle Haven",
+            "marker-color": "#CC0033",
+            "marker-size": "medium",
+            "marker-symbol": "building"
+        }
     }
-}];
+}
