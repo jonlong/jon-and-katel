@@ -1,6 +1,6 @@
 {
     "type": "FeatureCollection",
-    "features": {
+    "features": [{
         "type": "Feature",
         "geometry": {
             "type": "Point",
@@ -12,5 +12,5 @@
             "marker-size": "medium",
             "marker-symbol": "building"
         }
-    }
+    }]
 }
