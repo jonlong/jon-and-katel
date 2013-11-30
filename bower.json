@@ -1,0 +1,19 @@
+{
+  "name": "jon-and-katel",
+  "version": "0.0.0",
+  "main": "index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.10.2",
+    "ical.js": "*",
+    "jquery-pjax": "~1.7.3",
+    "jquery.transit": "~0.9.9",
+    "lodash": "~2.4.0"
+  }
+}

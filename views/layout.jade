@@ -1,0 +1,17 @@
+!!! 5
+html
+  head
+    title=title
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    block stylesheets
+      link(rel="stylesheet", href="/css/screen.css")
+      link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Lato:300,400")
+  body
+    div.site-wrapper
+      div.page-wrapper
+        block content
+      block navigation
+        include navigation
+    block scripts
+      script(src="/components/jquery/jquery.min.js")
+      script(src="/js/main.js")

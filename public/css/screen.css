@@ -1,0 +1,246 @@
+/* ============================================================
+jonandkatel.com SCSS
+
+/* ------------------------------------------------------------
+Imports
+------------------------------------------------------------ */
+/* line 17, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, .side-panel footer, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Micro-clearfix: h5bp.com/q */
+/* line 3, ../../sass/partials/_utilities.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 7, ../../sass/partials/_utilities.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 11, ../../sass/partials/_utilities.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* Hiding elements */
+/* line 17, ../../sass/partials/_utilities.scss */
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* For image replacement */
+/* line 29, ../../sass/partials/_utilities.scss */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+/* line 38, ../../sass/partials/_utilities.scss */
+.ir br {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+Variables
+------------------------------------------------------------ */
+/* ------------------------------------------------------------
+Type
+------------------------------------------------------------ */
+/* line 26, ../../sass/screen.scss */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* line 30, ../../sass/screen.scss */
+h1 {
+  font-size: 65px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+/* line 36, ../../sass/screen.scss */
+p, .side-panel footer {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* line 46, ../../sass/screen.scss */
+.main-navigation a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------------------------------------
+Layout
+------------------------------------------------------------ */
+/* line 64, ../../sass/screen.scss */
+.full-screen, .site-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* line 76, ../../sass/screen.scss */
+.side-panel {
+  width: 31.91489%;
+  background: white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px;
+}
+
+/* ------------------------------------------------------------
+Base
+------------------------------------------------------------ */
+/* line 90, ../../sass/screen.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+/* line 100, ../../sass/screen.scss */
+.main-navigation {
+  background: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+/* line 107, ../../sass/screen.scss */
+.main-navigation a {
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 114, ../../sass/screen.scss */
+.main-navigation a:hover {
+  color: #aaa;
+}
+/* line 118, ../../sass/screen.scss */
+.main-navigation ul {
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+}
+/* line 123, ../../sass/screen.scss */
+.main-navigation li {
+  display: inline-block;
+  margin: 0 20px;
+}
+/* line 126, ../../sass/screen.scss */
+.main-navigation li.split {
+  margin-right: 120px;
+}
+/* line 130, ../../sass/screen.scss */
+.main-navigation .logo {
+  position: absolute;
+  width: 100%;
+  top: -20px;
+}
+/* line 135, ../../sass/screen.scss */
+.main-navigation .icon-logo {
+  background-color: #fff;
+  background-position: center center;
+  padding: 5px;
+  border-radius: 100px;
+  width: 78px;
+  height: 78px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------
+Map
+------------------------------------------------------------ */

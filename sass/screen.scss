@@ -1,6 +1,149 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* ============================================================
+jonandkatel.com SCSS
 
-// @import "compass/reset";
+/* ------------------------------------------------------------
+Imports
+------------------------------------------------------------ */
+
+@import 'susy';
+@import 'compass/reset';
+@import 'compass/css3';
+// @import 'sprites/general/*.png';
+@import 'compass/utilities/sprites/sprite-img';
+@import "partials/utilities";
+
+/* ------------------------------------------------------------
+Variables
+------------------------------------------------------------ */
+$blue: blue;
+$white: #fff;
+$sans: 'Lato', sans-serif;
+
+/* ------------------------------------------------------------
+Type
+------------------------------------------------------------ */
+
+body {
+  font-family: $sans;
+}
+
+h1 {
+  font-size: 65px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.side-panel footer {
+  @extend p;
+}
+
+.main-navigation {
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+
+/* ------------------------------------------------------------
+Layout
+------------------------------------------------------------ */
+
+$total-columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 10px;
+$container-style: fluid;
+
+.full-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.side-panel {
+  width: columns(4, 12);
+  background: white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px;
+}
+
+/* ------------------------------------------------------------
+Base
+------------------------------------------------------------ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $sans;
+}
+
+.site-wrapper {
+  @extend .full-screen;
+}
+
+.main-navigation {
+  background: $white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  a {
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    @include transition(all .2s ease-in-out);
+    &:hover {
+      color: #aaa;
+    }
+  }
+  ul {
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+  }
+  li {
+    display: inline-block;
+    margin: 0 20px;
+    &.split {
+      margin-right: 120px;
+    }
+  }
+  .logo{
+    position: absolute;
+    width: 100%;
+    top: -20px;
+  }
+  .icon-logo {
+    background-color: #fff;
+    background-position: center center;
+    padding: 5px;
+    border-radius: 100px;
+    width: 78px;
+    height: 78px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* ------------------------------------------------------------
+Map
+------------------------------------------------------------ */
