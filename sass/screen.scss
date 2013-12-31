@@ -69,7 +69,7 @@ h3 {
   margin: 0;
 }
 
-p {
+p, li {
   font-family: 'Nixie One', sans-serif;
   font-size: 16px;
 }
@@ -333,6 +333,7 @@ Ceremony
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin-bottom: 70px;
   p {
     color: #fff;
     text-align: center;
@@ -355,5 +356,60 @@ Ceremony
     //     border-color: #fff;
     //   }
     // }
+  }
+}
+
+/* ------------------------------------------------------------
+Things to Do
+------------------------------------------------------------ */
+
+.favorites {
+  margin-top: -140px;
+  color: #fff;
+  h2, h3, p, li {
+    // color: #655C6F;
+    color: darken(#A29AAA, 30%);
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  a {
+    color: rgba(255,255,255,.75);
+  }
+  ul {
+    margin-left: -2em;
+    margin-bottom: 25px;
+  }
+  li {
+    margin-top: 5px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  span {
+    &:before, &:after {
+      border-color: darken(#A29AAA, 30%);
+    }
+  }
+  .wrap {
+    @extend .clearfix;
+    background: #A29AAA;
+    padding-bottom: 40px;
+  }
+  .lead {
+    @extend .text-size-1;
+    margin-bottom: 30px;
+  }
+}
+
+/* ------------------------------------------------------------
+Registry
+------------------------------------------------------------ */
+
+.registry {
+  margin-bottom: 80px;
+  .lead {
+    margin-bottom: 40px;
   }
 }

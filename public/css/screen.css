@@ -7,16 +7,16 @@ Imports
 ------------------------------------------------------------ */
 /* Micro-clearfix: h5bp.com/q */
 /* line 3, ../../sass/partials/_utilities.scss */
-.clearfix, section, .accommodations header {
+.clearfix, section, .accommodations header, .favorites .wrap {
   *zoom: 1;
 }
 /* line 7, ../../sass/partials/_utilities.scss */
-.clearfix:before, section:before, .accommodations header:before, .clearfix:after, section:after, .accommodations header:after {
+.clearfix:before, section:before, .accommodations header:before, .favorites .wrap:before, .clearfix:after, section:after, .accommodations header:after, .favorites .wrap:after {
   content: "";
   display: table;
 }
 /* line 11, ../../sass/partials/_utilities.scss */
-.clearfix:after, section:after, .accommodations header:after {
+.clearfix:after, section:after, .accommodations header:after, .favorites .wrap:after {
   clear: both;
 }
 
@@ -88,7 +88,7 @@ h3 {
 }
 
 /* line 72, ../../sass/screen.scss */
-p {
+p, li {
   font-family: 'Nixie One', sans-serif;
   font-size: 16px;
 }
@@ -100,7 +100,7 @@ a {
 }
 
 /* line 82, ../../sass/screen.scss */
-.text-size-1, .lead strong {
+.text-size-1, .lead strong, .favorites .lead {
   font-weight: normal;
   font-size: 35px;
   display: block;
@@ -386,22 +386,83 @@ Ceremony
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin-bottom: 70px;
 }
-/* line 336, ../../sass/screen.scss */
+/* line 337, ../../sass/screen.scss */
 .ceremony p {
   color: #fff;
   text-align: center;
 }
-/* line 340, ../../sass/screen.scss */
+/* line 341, ../../sass/screen.scss */
 .ceremony .img {
   padding-right: 0;
 }
-/* line 343, ../../sass/screen.scss */
-.ceremony .text-size-1, .ceremony .lead strong, .lead .ceremony strong {
+/* line 344, ../../sass/screen.scss */
+.ceremony .text-size-1, .ceremony .lead strong, .lead .ceremony strong, .ceremony .favorites .lead, .favorites .ceremony .lead {
   color: #667d85;
   margin-bottom: 560px;
 }
-/* line 347, ../../sass/screen.scss */
+/* line 348, ../../sass/screen.scss */
 .ceremony .col-md-4 {
   margin-bottom: 30px;
+}
+
+/* ------------------------------------------------------------
+Things to Do
+------------------------------------------------------------ */
+/* line 366, ../../sass/screen.scss */
+.favorites {
+  margin-top: -140px;
+  color: #fff;
+}
+/* line 369, ../../sass/screen.scss */
+.favorites h2, .favorites h3, .favorites p, .favorites li {
+  color: #554e5d;
+}
+/* line 373, ../../sass/screen.scss */
+.favorites h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+/* line 377, ../../sass/screen.scss */
+.favorites a {
+  color: rgba(255, 255, 255, 0.75);
+}
+/* line 380, ../../sass/screen.scss */
+.favorites ul {
+  margin-left: -2em;
+  margin-bottom: 25px;
+}
+/* line 384, ../../sass/screen.scss */
+.favorites li {
+  margin-top: 5px;
+}
+/* line 386, ../../sass/screen.scss */
+.favorites li:first-child {
+  margin: 0;
+}
+/* line 391, ../../sass/screen.scss */
+.favorites span:before, .favorites span:after {
+  border-color: #554e5d;
+}
+/* line 395, ../../sass/screen.scss */
+.favorites .wrap {
+  background: #A29AAA;
+  padding-bottom: 40px;
+}
+/* line 400, ../../sass/screen.scss */
+.favorites .lead {
+  margin-bottom: 30px;
+}
+
+/* ------------------------------------------------------------
+Registry
+------------------------------------------------------------ */
+/* line 410, ../../sass/screen.scss */
+.registry {
+  margin-bottom: 80px;
+}
+/* line 412, ../../sass/screen.scss */
+.registry .lead {
+  margin-bottom: 40px;
 }
