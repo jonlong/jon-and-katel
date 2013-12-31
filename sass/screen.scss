@@ -5,8 +5,6 @@ jonandkatel.com SCSS
 Imports
 ------------------------------------------------------------ */
 
-@import 'susy';
-@import 'compass/reset';
 @import 'compass/css3';
 // @import 'sprites/general/*.png';
 @import 'compass/utilities/sprites/sprite-img';
@@ -18,6 +16,27 @@ Variables
 $blue: blue;
 $white: #fff;
 $sans: 'Lato', sans-serif;
+$copy: #333;
+
+// Colors
+$degree1: #667D85;
+$degree2: #AB878B;
+$degree3: #E5B19B;
+$degree4: #FCCEAC;
+$degree5: #EFDFBB;
+$degree6: #F6F1ED;
+$degree7: #fff;
+
+// $degree1: #5C6043;
+// $degree2: #AB878B;
+// $degree3: #E5B19B;
+// $degree4: #FCCEAC;
+// $degree5: #EFDFBB;
+// $degree6: #F6F1ED;
+// $degree7: #fff;
+
+// pink
+// #F3A2A2
 
 /* ------------------------------------------------------------
 Type
@@ -25,41 +44,98 @@ Type
 
 body {
   font-family: $sans;
+  color: $copy;
 }
 
 h1 {
-  font-size: 65px;
-  margin-bottom: 30px;
-  font-weight: 300;
+  color: $degree1;
+}
+
+h2 {
+  font-family: 'Sacramento', cursive;
+  text-transform: lowercase;
+  text-align: center;
+  font-size: 40px;
+  color: $degree1;
+  padding: 100px 0;
+  position: relative;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Nixie One', cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.5;
+  font-family: 'Nixie One', sans-serif;
+  font-size: 16px;
 }
 
-.side-panel footer {
-  @extend p;
+a {
+  font-weight: bold;
+  letter-spacing: -.8px;
 }
 
-.main-navigation {
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
+.text-size-1 {
+  font-weight: normal;
+  font-size: 35px;
+  display: block;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.text-size-2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.lead {
+  @extend .text-size-2;
+  strong {
+    @extend .text-size-1;
   }
 }
+
+.fancy {
+  line-height: 0;
+  text-align: center;
+  span {
+    display: inline-block;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      border-bottom: 1px solid $degree1;
+      // border-top: 1px solid $degree1;
+      top: 0;
+      width: 1000px;
+    }
+    &:before {
+      right: 100%;
+      margin-right: 15px;
+    }
+    &:after {
+      left: 100%;
+      margin-left: 15px;
+    }
+  }
+}
+
+.nav {
+  font-family: 'Sacramento', cursive;
+  text-transform: lowercase;
+  font-size: 35px;
+}
+
 
 /* ------------------------------------------------------------
 Layout
 ------------------------------------------------------------ */
-
-$total-columns: 12;
-$column-width: 60px;
-$gutter-width: 20px;
-$grid-padding: 10px;
-$container-style: fluid;
 
 .full-screen {
   position: absolute;
@@ -73,14 +149,67 @@ $container-style: fluid;
   z-index: -1;
 }
 
-.side-panel {
-  width: columns(4, 12);
-  background: white;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 30px;
+section {
+  @extend .clearfix;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+.navbar {
+  @include transition(box-shadow 0.2s);
+  text-align: center;
+  background: #fff;
+  border-bottom: 0;
+  &.affix {
+    @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.10));
+  }
+  .nav {
+    float: none;
+    li {
+      display: inline-block;
+      float: none;
+      a {
+        padding: 30px 15px;
+        display: inline-block;
+      }
+      &.active a {
+        background: none;
+        color: #428bca;
+        &:hover {
+          background: none;
+          color: #428bca;
+        }
+      }
+      &:before {
+        content: '•';
+        display: inline-block;
+        vertical-align: sub;
+      }
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .home {
+      display: none;
+    }
+  }
+  &.affix-top {
+    position: relative;
+  }
+  &.affix {
+    position: fixed;
+    top: 0!important;
+  }
+}
+
+.affix + .site-wrapper {
+  padding-top: 100px
 }
 
 /* ------------------------------------------------------------
@@ -93,57 +222,138 @@ body {
   font-family: $sans;
 }
 
-.site-wrapper {
-  @extend .full-screen;
+/* ------------------------------------------------------------
+Hero
+------------------------------------------------------------ */
+
+.crest {
+  background: url(/images/crest.png) no-repeat 0 0;
+  width: 600px;
+  height: 414px;
 }
 
-.main-navigation {
-  background: $white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 2;
-  text-align: center;
-  a {
-    text-transform: uppercase;
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    @include transition(all .2s ease-in-out);
-    &:hover {
-      color: #aaa;
-    }
+
+/* ------------------------------------------------------------
+Accommodations
+------------------------------------------------------------ */
+
+.accommodations {
+  header {
+    @extend .clearfix;
+    margin-bottom: 50px;
   }
-  ul {
-    padding: 25px;
-    position: relative;
-    z-index: 1;
-  }
-  li {
+}
+
+.hotels {
+  padding: 0;
+  @include box-shadow(-2px 0px 0px 0px rgba(0, 0, 0, 0.10));
+}
+
+.hotel {
+  cursor: pointer;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,.3);
+  color: lighten(#91D1FF, 28%);
+  @include transition(all 0.3s ease-in-out);
+  .btn {
     display: inline-block;
-    margin: 0 20px;
-    &.split {
-      margin-right: 120px;
+    margin: 0 5px;
+    &.address {
+      margin-left: 0;
     }
   }
-  .logo{
-    position: absolute;
-    width: 100%;
-    top: -20px;
+  .btn-primary {
+    color: #fff;
   }
-  .icon-logo {
-    background-color: #fff;
-    background-position: center center;
-    padding: 5px;
-    border-radius: 100px;
-    width: 78px;
-    height: 78px;
-    display: block;
-    margin: 0 auto;
+  .btn-outline-inverse {
+      color: #428bca;
+      background: rgba(255,255,255,.6);
+      // border: 1px solid darken(#91D1FF, 20%);
+    a {
+      color: #428bca;
+    }
+
+    &:hover {
+      background: #fff;
+    }
   }
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  span {
+    margin-right: 8px;
+  }
+  p {
+    margin: 20px 0 15px;
+    line-height: 1.4;
+  }
+  h3 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  img {
+    margin-bottom: 15px;
+  }
+  footer {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  &:hover {
+    background: darken(#91D1FF, 25%);
+  }
+  &:first-child {
+    border-top: 0;
+    // padding-top: 0;
+  }
+}
+
+.omni {
+  background: darken(#91D1FF, 5%);
+}
+
+.hampton-inn {
+  background: darken(#91D1FF, 10%);
+}
+
+.hampton-suites {
+  background: darken(#91D1FF, 15%);
 }
 
 /* ------------------------------------------------------------
-Map
+Ceremony
 ------------------------------------------------------------ */
+
+.ceremony {
+  background: url(/images/jamesriver.jpg) no-repeat center 380px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  p {
+    color: #fff;
+    text-align: center;
+  }
+  .img {
+    padding-right: 0;
+  }
+  .text-size-1 {
+    color: $degree1;
+    margin-bottom: 560px;
+  }
+  .col-md-4 {
+    margin-bottom: 30px;
+  }
+  h2 {
+    // span {
+    //   color: #fff;
+    //   &:before,
+    //   &:after {
+    //     border-color: #fff;
+    //   }
+    // }
+  }
+}

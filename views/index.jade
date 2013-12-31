@@ -1,4 +1,77 @@
 extends layout
 
 block content
-  p HELLO WORLD!
+  section#hero.hero
+      h1#crest.crest
+  section#accommodations.accommodations.row
+    h2.fancy
+      span Accommodations
+    header
+      div.col-md-6.col-md-offset-1
+        p.lead <strong>We hope you’ll join us in June!</strong> We’ve organized several blocks of rooms at three different hotels, which you can find below. Shuttle buses will transport guests between these hotels and the venue.
+      div.col-md-4
+        p We've secured special rates with these hotels, but please feel free to stay wherever you like! There are many lovely places in the area.
+        p We have used <a href="https://www.airbnb.com/s/Charlottesville--VA?source=bb">airbnb.com</a> with much happy success, and there are several <a href="http://www.tripadvisor.com/Hotels-g57592-c2-Charlottesville_Virginia-Hotels.html">wonderful bed & breakfasts</a> to choose from.
+    div#map.col-md-7
+    div#hotels.hotels.col-md-5
+        div#omni.hotel.omni
+          h3 Omni Charlottesville
+          //- img.img-responsive.img-rounded(src="images/omni.jpg", alt="Interior of a king room at the Omni Charlottesville")
+          p Book directly on a special booking site for a rate of $249 per night.
+          p.address.btn.btn-outline-inverse
+            span.glyphicon.glyphicon-map-marker
+            a(href="https://goo.gl/maps/jGtEp") 212 Ridge McIntire Rd
+          p.phone.btn.btn-outline-inverse
+            span.glyphicon.glyphicon-earphone
+            a(type="tel") 202-340-5498
+          p.booking.btn.btn-primary
+            span.glyphicon.glyphicon-calendar
+            a(href="#") Book a Room
+        div#hampton-inn.hotel.hampton-inn
+          h3 Hampton Inn
+          //- img.img-responsive.img-rounded(src="images/hamptoninn.jpg", alt="Interior of a king room at the Hampton Inn")
+          p Make sure to select the option to “add special rate codes” and use the code <strong>LLW</strong> to get a rate of $150 per night.
+          footer * Please note that there are <strong>two</strong> Hampton Inns.
+          p.address.btn.btn-outline-inverse
+            span.glyphicon.glyphicon-map-marker
+            a(href="https://goo.gl/maps/0WZnl") 2035 India Rd
+          p.phone.btn.btn-outline-inverse
+            span.glyphicon.glyphicon-earphone
+            a(type="tel") 202-340-5498
+          p.booking.btn.btn-primary
+            span.glyphicon.glyphicon-calendar
+            a(href="http://hamptoninn3.hilton.com/en/hotels/virginia/hampton-inn-charlottesville-CHOVAHX/index.html") Book a Room
+        div#hampton-suites.hotel.hampton-suites
+          h3 Hampton Inn and Suites
+          //- img.img-responsive.img-rounded(src="images/hamptonsuites.jpg", alt="Interior of a king room at the Hampton Inn and Suites")
+          p Make sure to select the option to “add special rate codes” and use the code <strong>LOW</strong> to get a rate of $219 per night.
+          footer * Please note that there are <strong>two</strong> Hampton Inns.
+          p.address.btn.btn-outline-inverse
+            span.glyphicon.glyphicon-map-marker
+            a(href="https://goo.gl/maps/B3kv1") 900 W Main St.
+          p.phone.btn.btn-outline-inverse
+            span.glyphicon.glyphicon-earphone
+            a(type="tel") 202-340-5498
+          p.booking.btn.btn-primary
+            span.glyphicon.glyphicon-calendar
+            a(href="http://hamptoninn3.hilton.com/en/hotels/virginia/hampton-inn-and-suites-charlottesville-at-the-university-CHOMSHX/index.html") Book a Room
+  section#ceremony.ceremony
+    h2.fancy
+      span Ceremony & Reception
+    div.col-md-4.col-md-offset-4
+      p.text-size-1 We’ll tie the knot and celebrate directly following, at <a href="http://www.basicjoy.com/wordpress/bellehaven-on-the-james/">Belle Haven</a> in Scottsville, VA.
+      p.text-size-2 More details about the ceremony and festivities coming soon!
+  section#favorites.favorites
+    h2.fancy
+     span Favorites
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio mauris, auctor ut varius non, tempus nec nisi. Quisque at tellus risus. Aliquam erat volutpat. Proin et dolor magna. Sed vel metus justo. Mauris eu metus massa. Duis viverra ultricies nisl, ut pharetra eros hendrerit non. Phasellus laoreet libero non eros rhoncus sed iaculis ante molestie. Etiam arcu purus, dictum a tincidunt id, ornare sed orci. Curabitur ornare ornare nulla quis tincidunt. Morbi nisi elit, mattis nec bibendum vel, facilisis eu ipsum. Phasellus non dolor erat, in placerat lacus. Aliquam pulvinar, est eu commodo vulputate, neque elit molestie lorem, sed vestibulum felis erat et risus. Nulla non velit odio.
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio mauris, auctor ut varius non, tempus nec nisi. Quisque at tellus risus. Aliquam erat volutpat. Proin et dolor magna. Sed vel metus justo. Mauris eu metus massa. Duis viverra ultricies nisl, ut pharetra eros hendrerit non. Phasellus laoreet libero non eros rhoncus sed iaculis ante molestie. Etiam arcu purus, dictum a tincidunt id, ornare sed orci. Curabitur ornare ornare nulla quis tincidunt. Morbi nisi elit, mattis nec bibendum vel, facilisis eu ipsum. Phasellus non dolor erat, in placerat lacus. Aliquam pulvinar, est eu commodo vulputate, neque elit molestie lorem, sed vestibulum felis erat et risus. Nulla non velit odio.
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio mauris, auctor ut varius non, tempus nec nisi. Quisque at tellus risus. Aliquam erat volutpat. Proin et dolor magna. Sed vel metus justo. Mauris eu metus massa. Duis viverra ultricies nisl, ut pharetra eros hendrerit non. Phasellus laoreet libero non eros rhoncus sed iaculis ante molestie. Etiam arcu purus, dictum a tincidunt id, ornare sed orci. Curabitur ornare ornare nulla quis tincidunt. Morbi nisi elit, mattis nec bibendum vel, facilisis eu ipsum. Phasellus non dolor erat, in placerat lacus. Aliquam pulvinar, est eu commodo vulputate, neque elit molestie lorem, sed vestibulum felis erat et risus. Nulla non velit odio.
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio mauris, auctor ut varius non, tempus nec nisi. Quisque at tellus risus. Aliquam erat volutpat. Proin et dolor magna. Sed vel metus justo. Mauris eu metus massa. Duis viverra ultricies nisl, ut pharetra eros hendrerit non. Phasellus laoreet libero non eros rhoncus sed iaculis ante molestie. Etiam arcu purus, dictum a tincidunt id, ornare sed orci. Curabitur ornare ornare nulla quis tincidunt. Morbi nisi elit, mattis nec bibendum vel, facilisis eu ipsum. Phasellus non dolor erat, in placerat lacus. Aliquam pulvinar, est eu commodo vulputate, neque elit molestie lorem, sed vestibulum felis erat et risus. Nulla non velit odio.
+  section#registry.registry
+    h2.fancy
+      span Registry
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio mauris, auctor ut varius non, tempus nec nisi. Quisque at tellus risus. Aliquam erat volutpat. Proin et dolor magna. Sed vel metus justo. Mauris eu metus massa. Duis viverra ultricies nisl, ut pharetra eros hendrerit non. Phasellus laoreet libero non eros rhoncus sed iaculis ante molestie. Etiam arcu purus, dictum a tincidunt id, ornare sed orci. Curabitur ornare ornare nulla quis tincidunt. Morbi nisi elit, mattis nec bibendum vel, facilisis eu ipsum. Phasellus non dolor erat, in placerat lacus. Aliquam pulvinar, est eu commodo vulputate, neque elit molestie lorem, sed vestibulum felis erat et risus. Nulla non velit odio.
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio mauris, auctor ut varius non, tempus nec nisi. Quisque at tellus risus. Aliquam erat volutpat. Proin et dolor magna. Sed vel metus justo. Mauris eu metus massa. Duis viverra ultricies nisl, ut pharetra eros hendrerit non. Phasellus laoreet libero non eros rhoncus sed iaculis ante molestie. Etiam arcu purus, dictum a tincidunt id, ornare sed orci. Curabitur ornare ornare nulla quis tincidunt. Morbi nisi elit, mattis nec bibendum vel, facilisis eu ipsum. Phasellus non dolor erat, in placerat lacus. Aliquam pulvinar, est eu commodo vulputate, neque elit molestie lorem, sed vestibulum felis erat et risus. Nulla non velit odio.
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio mauris, auctor ut varius non, tempus nec nisi. Quisque at tellus risus. Aliquam erat volutpat. Proin et dolor magna. Sed vel metus justo. Mauris eu metus massa. Duis viverra ultricies nisl, ut pharetra eros hendrerit non. Phasellus laoreet libero non eros rhoncus sed iaculis ante molestie. Etiam arcu purus, dictum a tincidunt id, ornare sed orci. Curabitur ornare ornare nulla quis tincidunt. Morbi nisi elit, mattis nec bibendum vel, facilisis eu ipsum. Phasellus non dolor erat, in placerat lacus. Aliquam pulvinar, est eu commodo vulputate, neque elit molestie lorem, sed vestibulum felis erat et risus. Nulla non velit odio.
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio mauris, auctor ut varius non, tempus nec nisi. Quisque at tellus risus. Aliquam erat volutpat. Proin et dolor magna. Sed vel metus justo. Mauris eu metus massa. Duis viverra ultricies nisl, ut pharetra eros hendrerit non. Phasellus laoreet libero non eros rhoncus sed iaculis ante molestie. Etiam arcu purus, dictum a tincidunt id, ornare sed orci. Curabitur ornare ornare nulla quis tincidunt. Morbi nisi elit, mattis nec bibendum vel, facilisis eu ipsum. Phasellus non dolor erat, in placerat lacus. Aliquam pulvinar, est eu commodo vulputate, neque elit molestie lorem, sed vestibulum felis erat et risus. Nulla non velit odio.

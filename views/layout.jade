@@ -4,14 +4,22 @@ html
     title=title
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
     block stylesheets
+      link(rel="stylesheet", href="/components/bootstrap/dist/css/bootstrap.min.css")
+      //- link(rel="stylesheet", href="/components/bootstrap/dist/css/bootstrap-theme.min.css")
+      link(rel="stylesheet", href="http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css")
       link(rel="stylesheet", href="/css/screen.css")
-      link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Lato:300,400")
+      link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Nixie+One|Sacramento|Lato|Open+Sans")
+      | <!--[if lte IE 8]>
+      |  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.ie.css' rel='stylesheet' >
+      | <![endif]-->
+    block headscripts
   body
+    block navigation
+      include navigation
     div.site-wrapper
-      div.page-wrapper
         block content
-      block navigation
-        include navigation
     block scripts
       script(src="/components/jquery/jquery.min.js")
-      script(src="/js/main.js")
+      script(src="/components/bootstrap/dist/js/bootstrap.min.js")
+      script(src="/components/FitText.js/jquery.fittext.js")
+    script(src="/js/main.js")

@@ -63,17 +63,10 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
-          config: '<%= _meta.dirs.public %>/config.rb'
+          config: './config.rb'
         }
       }
     },
-
-    // shell: {
-    //   jekyll: {
-    //       command: 'rm -rf _site/*; jekyll build',
-    //       stdout: true
-    //   }
-    // },
 
     // Watch
     watch: {
@@ -91,6 +84,10 @@ module.exports = function(grunt) {
         files: ['<%= _meta.dirs.sass %>/**/*.scss'],
         tasks: ['compass']
       },
+      public: {
+        files: ['public/**/*', 'views/*.jade'],
+        tasks: []
+      }
       // grunticon: {
       //   files: ['<%= _meta.dirs.images %>/svg/**'],
       //   tasks: ['grunticon:svg']

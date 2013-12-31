@@ -1,12 +1,19 @@
-nav#main-navigation.main-navigation
-  div.logo
-    a(class="ir icon-logo", href="/", title="Go Home") Jon and Katel
-  ul
-    li
-      a(href="/map", title="", data-section="map") Map
-    li.split
-      a(href="/schedule", title="", data-section="schedule") Schedule
-    li
-      a(href="#", title="", data-section="") Item 3
-    li
-      a(href="#", title="", data-section="") Item 4
+nav#nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+  div.navbar-header
+    button.navbar-toggle(type="button", data-toggle="collapse", data-target="#collapsed-navbar")
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+  div#collapsed-navbar.collapse.navbar-collapse
+    ul.nav.navbar-nav
+      li
+        a(href="#accommodations") Accommodations
+      li
+        a(href="#ceremony") Ceremony
+      li
+        a(href="#favorites") Favorites
+      li
+        a(href="#registry") Gifts
+      li.home
+        a(href="#hero") Katel & Jon

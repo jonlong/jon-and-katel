@@ -1,4 +1,4 @@
-extends layout
+extends index
 
 block append stylesheets
   link(rel="stylesheet", href="http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css")
@@ -6,22 +6,21 @@ block append stylesheets
   |  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.ie.css' rel='stylesheet' >
   | <![endif]-->
 
-block scripts
+block append scripts
   script(src="http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js")
   script.
     var map = L.mapbox.map('map', 'jonlong.map-wxgjdzs5');
 
-block content
-  div#page.map
-    div#map.full-screen
-    section#omni.side-panel
+block map
+  section#map
+    div#omni.side-panel
       h1 Omni Charlottesville Hotel
       p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-    section#hampton-inn.side-panel
+    div#hampton-inn.side-panel
       h1 Hampton Inn
       p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
       footer Please note that there are TWO Hampton Inns.
-    section#hampton-inn-suites.side-panel
+    div#hampton-inn-suites.side-panel
       h1 Hampton Inn and Suites
       p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
         footer Please note that there are TWO Hampton Inns.
