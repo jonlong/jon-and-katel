@@ -145,16 +145,20 @@ a {
 }
 
 /* line 129, ../../sass/screen.scss */
-.nav {
+.nav li {
   font-family: 'Sacramento', cursive;
   text-transform: lowercase;
   font-size: 35px;
+}
+/* line 133, ../../sass/screen.scss */
+.nav li a {
+  font-weight: normal;
 }
 
 /* ------------------------------------------------------------
 Layout
 ------------------------------------------------------------ */
-/* line 140, ../../sass/screen.scss */
+/* line 143, ../../sass/screen.scss */
 .full-screen {
   position: absolute;
   top: 0;
@@ -167,18 +171,18 @@ Layout
   z-index: -1;
 }
 
-/* line 152, ../../sass/screen.scss */
+/* line 155, ../../sass/screen.scss */
 section {
   padding-top: 70px;
   margin-top: -70px;
 }
 
-/* line 158, ../../sass/screen.scss */
+/* line 161, ../../sass/screen.scss */
 body, html {
   overflow-x: hidden;
 }
 
-/* line 162, ../../sass/screen.scss */
+/* line 165, ../../sass/screen.scss */
 .navbar {
   -webkit-transition: box-shadow 0.2s;
   -moz-transition: box-shadow 0.2s;
@@ -188,61 +192,61 @@ body, html {
   background: #fff;
   border-bottom: 0;
 }
-/* line 167, ../../sass/screen.scss */
+/* line 170, ../../sass/screen.scss */
 .navbar.affix {
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
 }
-/* line 170, ../../sass/screen.scss */
+/* line 173, ../../sass/screen.scss */
 .navbar .nav {
   float: none;
 }
-/* line 172, ../../sass/screen.scss */
+/* line 175, ../../sass/screen.scss */
 .navbar .nav li {
   display: inline-block;
   float: none;
 }
-/* line 175, ../../sass/screen.scss */
+/* line 178, ../../sass/screen.scss */
 .navbar .nav li a {
   padding: 30px 15px;
   display: inline-block;
 }
-/* line 179, ../../sass/screen.scss */
+/* line 182, ../../sass/screen.scss */
 .navbar .nav li.active a {
   background: none;
   color: #428bca;
 }
-/* line 182, ../../sass/screen.scss */
+/* line 185, ../../sass/screen.scss */
 .navbar .nav li.active a:hover {
   background: none;
   color: #428bca;
 }
-/* line 187, ../../sass/screen.scss */
+/* line 190, ../../sass/screen.scss */
 .navbar .nav li:before {
   content: '•';
   display: inline-block;
   vertical-align: sub;
 }
-/* line 193, ../../sass/screen.scss */
+/* line 196, ../../sass/screen.scss */
 .navbar .nav li:first-child:before {
   display: none;
 }
-/* line 198, ../../sass/screen.scss */
+/* line 201, ../../sass/screen.scss */
 .navbar .nav .home {
   display: none;
 }
-/* line 202, ../../sass/screen.scss */
+/* line 205, ../../sass/screen.scss */
 .navbar.affix-top {
   position: relative;
 }
-/* line 205, ../../sass/screen.scss */
+/* line 208, ../../sass/screen.scss */
 .navbar.affix {
   position: fixed;
   top: 0 !important;
 }
 
-/* line 211, ../../sass/screen.scss */
+/* line 214, ../../sass/screen.scss */
 .affix + .site-wrapper {
   padding-top: 100px;
 }
@@ -250,7 +254,7 @@ body, html {
 /* ------------------------------------------------------------
 Base
 ------------------------------------------------------------ */
-/* line 219, ../../sass/screen.scss */
+/* line 222, ../../sass/screen.scss */
 body {
   margin: 0;
   padding: 0;
@@ -260,7 +264,7 @@ body {
 /* ------------------------------------------------------------
 Hero
 ------------------------------------------------------------ */
-/* line 229, ../../sass/screen.scss */
+/* line 232, ../../sass/screen.scss */
 .crest {
   background: url(/images/crest.png) no-repeat 0 0;
   width: 600px;
@@ -270,12 +274,12 @@ Hero
 /* ------------------------------------------------------------
 Accommodations
 ------------------------------------------------------------ */
-/* line 241, ../../sass/screen.scss */
+/* line 244, ../../sass/screen.scss */
 .accommodations header {
   margin-bottom: 50px;
 }
 
-/* line 247, ../../sass/screen.scss */
+/* line 250, ../../sass/screen.scss */
 .hotels {
   padding: 0;
   -webkit-box-shadow: -2px 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -283,7 +287,7 @@ Accommodations
   box-shadow: -2px 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 252, ../../sass/screen.scss */
+/* line 255, ../../sass/screen.scss */
 .hotel {
   cursor: pointer;
   padding: 20px;
@@ -294,84 +298,84 @@ Accommodations
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 258, ../../sass/screen.scss */
+/* line 261, ../../sass/screen.scss */
 .hotel .btn {
   display: inline-block;
   margin: 0 5px;
 }
-/* line 261, ../../sass/screen.scss */
+/* line 264, ../../sass/screen.scss */
 .hotel .btn.address {
   margin-left: 0;
 }
-/* line 265, ../../sass/screen.scss */
+/* line 268, ../../sass/screen.scss */
 .hotel .btn-primary {
   color: #fff;
 }
-/* line 268, ../../sass/screen.scss */
+/* line 271, ../../sass/screen.scss */
 .hotel .btn-outline-inverse {
   color: #428bca;
   background: rgba(255, 255, 255, 0.6);
 }
-/* line 272, ../../sass/screen.scss */
+/* line 275, ../../sass/screen.scss */
 .hotel .btn-outline-inverse a {
   color: #428bca;
 }
-/* line 276, ../../sass/screen.scss */
+/* line 279, ../../sass/screen.scss */
 .hotel .btn-outline-inverse:hover {
   background: #fff;
 }
-/* line 280, ../../sass/screen.scss */
+/* line 283, ../../sass/screen.scss */
 .hotel a {
   color: #fff;
 }
-/* line 282, ../../sass/screen.scss */
+/* line 285, ../../sass/screen.scss */
 .hotel a:hover {
   text-decoration: none;
 }
-/* line 286, ../../sass/screen.scss */
+/* line 289, ../../sass/screen.scss */
 .hotel span {
   margin-right: 8px;
 }
-/* line 289, ../../sass/screen.scss */
+/* line 292, ../../sass/screen.scss */
 .hotel p {
   margin: 20px 0 15px;
   line-height: 1.4;
 }
-/* line 293, ../../sass/screen.scss */
+/* line 296, ../../sass/screen.scss */
 .hotel h3 {
   color: #fff;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 298, ../../sass/screen.scss */
+/* line 301, ../../sass/screen.scss */
 .hotel img {
   margin-bottom: 15px;
 }
-/* line 301, ../../sass/screen.scss */
+/* line 304, ../../sass/screen.scss */
 .hotel footer {
   font-style: italic;
   margin-bottom: 20px;
 }
-/* line 305, ../../sass/screen.scss */
+/* line 308, ../../sass/screen.scss */
 .hotel:hover {
   background: #129cff;
 }
-/* line 308, ../../sass/screen.scss */
+/* line 311, ../../sass/screen.scss */
 .hotel:first-child {
   border-top: 0;
 }
 
-/* line 314, ../../sass/screen.scss */
+/* line 317, ../../sass/screen.scss */
 .omni {
   background: #78c6ff;
 }
 
-/* line 318, ../../sass/screen.scss */
+/* line 321, ../../sass/screen.scss */
 .hampton-inn {
   background: #5ebcff;
 }
 
-/* line 322, ../../sass/screen.scss */
+/* line 325, ../../sass/screen.scss */
 .hampton-suites {
   background: #45b1ff;
 }
@@ -379,7 +383,7 @@ Accommodations
 /* ------------------------------------------------------------
 Ceremony
 ------------------------------------------------------------ */
-/* line 330, ../../sass/screen.scss */
+/* line 333, ../../sass/screen.scss */
 .ceremony {
   background: url(/images/jamesriver.jpg) no-repeat center 380px;
   -webkit-background-size: cover;
@@ -388,21 +392,21 @@ Ceremony
   background-size: cover;
   margin-bottom: 70px;
 }
-/* line 337, ../../sass/screen.scss */
+/* line 340, ../../sass/screen.scss */
 .ceremony p {
   color: #fff;
   text-align: center;
 }
-/* line 341, ../../sass/screen.scss */
+/* line 344, ../../sass/screen.scss */
 .ceremony .img {
   padding-right: 0;
 }
-/* line 344, ../../sass/screen.scss */
+/* line 347, ../../sass/screen.scss */
 .ceremony .text-size-1, .ceremony .lead strong, .lead .ceremony strong, .ceremony .favorites .lead, .favorites .ceremony .lead {
   color: #667d85;
   margin-bottom: 560px;
 }
-/* line 348, ../../sass/screen.scss */
+/* line 351, ../../sass/screen.scss */
 .ceremony .col-md-4 {
   margin-bottom: 30px;
 }
@@ -410,47 +414,47 @@ Ceremony
 /* ------------------------------------------------------------
 Things to Do
 ------------------------------------------------------------ */
-/* line 366, ../../sass/screen.scss */
+/* line 369, ../../sass/screen.scss */
 .favorites {
   margin-top: -140px;
   color: #fff;
 }
-/* line 369, ../../sass/screen.scss */
+/* line 372, ../../sass/screen.scss */
 .favorites h2, .favorites h3, .favorites p, .favorites li {
   color: #554e5d;
 }
-/* line 373, ../../sass/screen.scss */
+/* line 376, ../../sass/screen.scss */
 .favorites h3 {
   font-size: 20px;
   margin-bottom: 15px;
 }
-/* line 377, ../../sass/screen.scss */
+/* line 380, ../../sass/screen.scss */
 .favorites a {
   color: rgba(255, 255, 255, 0.75);
 }
-/* line 380, ../../sass/screen.scss */
+/* line 383, ../../sass/screen.scss */
 .favorites ul {
   margin-left: -2em;
   margin-bottom: 25px;
 }
-/* line 384, ../../sass/screen.scss */
+/* line 387, ../../sass/screen.scss */
 .favorites li {
   margin-top: 5px;
 }
-/* line 386, ../../sass/screen.scss */
+/* line 389, ../../sass/screen.scss */
 .favorites li:first-child {
   margin: 0;
 }
-/* line 391, ../../sass/screen.scss */
+/* line 394, ../../sass/screen.scss */
 .favorites span:before, .favorites span:after {
   border-color: #554e5d;
 }
-/* line 395, ../../sass/screen.scss */
+/* line 398, ../../sass/screen.scss */
 .favorites .wrap {
   background: #A29AAA;
   padding-bottom: 40px;
 }
-/* line 400, ../../sass/screen.scss */
+/* line 403, ../../sass/screen.scss */
 .favorites .lead {
   margin-bottom: 30px;
 }
@@ -458,11 +462,11 @@ Things to Do
 /* ------------------------------------------------------------
 Registry
 ------------------------------------------------------------ */
-/* line 410, ../../sass/screen.scss */
+/* line 413, ../../sass/screen.scss */
 .registry {
   margin-bottom: 80px;
 }
-/* line 412, ../../sass/screen.scss */
+/* line 415, ../../sass/screen.scss */
 .registry .lead {
   margin-bottom: 40px;
 }

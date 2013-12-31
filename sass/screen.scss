@@ -126,10 +126,13 @@ a {
   }
 }
 
-.nav {
+.nav li {
   font-family: 'Sacramento', cursive;
   text-transform: lowercase;
   font-size: 35px;
+  a {
+    font-weight: normal;
+  }
 }
 
 
