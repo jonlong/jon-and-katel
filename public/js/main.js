@@ -1,6 +1,26 @@
-/*global $, mapboxMap, L */
+/*global $, mapboxMap, L, google */
 
 var JK = function() {
+
+  // Map Items
+
+  var places = [
+    {
+      id: 'omni',
+      name: 'Omni Charlottesville',
+      position: [38.031439, -78.4849821]
+    },
+    {
+      id: 'hamptoninn',
+      name: 'Hampton Inn',
+      position: [38.0626743, -78.4886727]
+    },
+    {
+      id: 'hamptonsuites',
+      name: 'Hampton Inn & Suites',
+      position: [38.0322372, -78.4943703]
+    }
+  ];
 
   // DOM Elements
 
@@ -105,45 +125,35 @@ var JK = function() {
 
     drawMap : function() {
 
-      // Map Locations
-      var hamptonInn = new google.maps.LatLng(38.0626743,-78.4886727);
-      var omni = new google.maps.LatLng(38.031439,-78.4849821);
-      var hamptonSuites = new google.maps.LatLng(38.0322372, -78.4943703);
-
-      setMapHeight();
+      var markers = [];
       var mapOptions = {
         center: new google.maps.LatLng(38.029305898704656, -78.47667809750419),
         zoom: 13,
         scrollwheel: false
       };
+
+      setMapHeight();
+
       var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-      // var markerLayer = L.mapbox.markerLayer()
-      //   .loadURL('/js/geojson.json')
-      //   .addTo(mapboxMap);
+      var infoWindow = new google.maps.InfoWindow();
 
-      //   console.log(markerLayer)
-      //   console.log(L.mapbox.markers)
-      //   console.log(markerLayer.getLayers())
+      for (i = 0; i < places.length; i++) {
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(places[i].position[0], places[i].position[1]),
+          map: map
+        });
+        markers.push(marker);
+      }
 
-      // markerLayer.on('ready', function() {
-      //   mapboxMap.fitBounds(markerLayer.getBounds());
-      // });
+      hotels.find('.hotel').on('click', function() {
+        var id = $(this).attr('id');
+        var index = $(this).index();
 
-      // hotels.find('.hotel').on('click', function(e) {
-      //   var name = $(this).find('h3').text();
-
-
-
-      //   var position = $(this).attr('data-position');
-      //   var loc = position.split(',');
-
-      //   mapboxMap.setView(loc, 14);
-      // });
-
+        infoWindow.setContent(places[index].name);
+        infoWindow.open(map, markers[index]);
+      });
     }
-
   };
-
 }();
 
 JK.init();
