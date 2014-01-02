@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie ie6 lte7"><![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie ie7 lte7 lte8"><![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie ie8 lte8"><![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie ie9 lte9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
   <head>
     <title>Jon and Katel Are Getting Married</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- build:css(public) /dist/css/all.min.css -->
@@ -10,6 +14,13 @@
     <% include dist/stylesheets.html %>
     <% } %>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One|Sacramento|Lato|Open+Sans">
+    <!--[if lte IE 7]><!-->
+    <link rel="stylesheet" href="/components/bootstrap-ie7/css/bootstrap-ie7.css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]><!-->
+    <script type="text/javascript" src="/components/html5shiv/dist/html5shiv.js"></script>
+    <script type="text/javascript" src="/components/respond/dest/respond.min.js"></script>
+    <!--<![endif]-->
   </head>
   <body>
     <% include navigation.html %>

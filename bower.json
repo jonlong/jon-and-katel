@@ -15,6 +15,9 @@
     "jquery-pjax": "~1.7.3",
     "jquery.transit": "~0.9.9",
     "lodash": "~2.4.0",
-    "foundation": "~5.0.2"
+    "foundation": "~5.0.2",
+    "respond": "~1.4.2",
+    "html5shiv": "~3.7.0",
+    "bootstrap-ie7": "*"
   }
 }
