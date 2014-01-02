@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- build:css(public) css/all.min.css -->
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/screen.css"><!-- endbuild -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One|Sacramento|Lato|Open+Sans"><!--[if lte IE 8]>
+     <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.ie.css' rel='stylesheet' >
+    <![endif]-->
+  </head>
+  <body>
+    <nav id="nav" role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target="#collapsed-navbar" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      </div>
+      <div id="collapsed-navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#accommodations">Accommodations</a></li>
+          <li><a href="#ceremony">Ceremony</a></li>
+          <li><a href="#favorites">Things to Do</a></li>
+          <li><a href="#registry">Gifts</a></li>
+          <li class="home"><a href="#hero">Katel & Jon</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="site-wrapper">
+      <section id="hero" class="hero">
+        <header>
+          <h1 class="hidden">Jon and Katel</h1>
+          <h2 class="hidden">Tie The Knot, June 21, 2014</h2><img id="crest" src="images/crest.png" alt="Jon and Katel, June 21 2014" class="crest ri">
+        </header>
+      </section>
+      <section id="accommodations" class="accommodations row">
+        <h2 class="fancy"><span>Accommodations</span></h2>
+        <header>
+          <div class="col-md-6 col-md-offset-1">
+            <p class="lead"><strong>We hope you’ll join us in June!</strong> We’ve organized several blocks of rooms at three different hotels, which you can find below. Shuttle buses will transport guests between these hotels and the venue.</p>
+          </div>
+          <div class="col-md-4">
+            <p>We've secured special rates with these hotels, but please feel free to stay wherever you like! There are many lovely places in the area.</p>
+            <p>We have used <a href="https://www.airbnb.com/s/Charlottesville--VA?source=bb">airbnb.com</a> with much happy success, and there are several <a href="http://www.tripadvisor.com/Hotels-g57592-c2-Charlottesville_Virginia-Hotels.html">wonderful bed & breakfasts</a> to choose from.</p>
+          </div>
+        </header>
+        <div id="map" class="col-md-7"></div>
+        <div id="hotels" class="hotels col-md-5">
+          <div id="omni" class="hotel omni">
+            <h3>Omni Charlottesville</h3>
+            <p>Book directly on a special booking site for a rate of $249 per night.</p>
+            <p class="address btn btn-outline-inverse"><span class="glyphicon glyphicon-map-marker"></span><a href="https://goo.gl/maps/jGtEp">212 Ridge McIntire Rd</a></p>
+            <p class="phone btn btn-outline-inverse"><span class="glyphicon glyphicon-earphone"></span><a type="tel">202-340-5498</a></p>
+            <p class="booking btn btn-primary"><span class="glyphicon glyphicon-calendar"></span><a href="#">Book a Room</a></p>
+          </div>
+          <div id="hampton-inn" class="hotel hampton-inn">
+            <h3>Hampton Inn</h3>
+            <p>Make sure to select the option to “add special rate codes” and use the code <strong>LLW</strong> to get a rate of $150 per night.</p>
+            <footer>* Please note that there are <strong>two</strong> Hampton Inns.</footer>
+            <p class="address btn btn-outline-inverse"><span class="glyphicon glyphicon-map-marker"></span><a href="https://goo.gl/maps/0WZnl">2035 India Rd</a></p>
+            <p class="phone btn btn-outline-inverse"><span class="glyphicon glyphicon-earphone"></span><a type="tel">202-340-5498</a></p>
+            <p class="booking btn btn-primary"><span class="glyphicon glyphicon-calendar"></span><a href="http://hamptoninn3.hilton.com/en/hotels/virginia/hampton-inn-charlottesville-CHOVAHX/index.html">Book a Room</a></p>
+          </div>
+          <div id="hampton-suites" class="hotel hampton-suites">
+            <h3>Hampton Inn and Suites</h3>
+            <p>Make sure to select the option to “add special rate codes” and use the code <strong>LOW</strong> to get a rate of $219 per night.</p>
+            <footer>* Please note that there are <strong>two</strong> Hampton Inns.</footer>
+            <p class="address btn btn-outline-inverse"><span class="glyphicon glyphicon-map-marker"></span><a href="https://goo.gl/maps/B3kv1">900 W Main St.</a></p>
+            <p class="phone btn btn-outline-inverse"><span class="glyphicon glyphicon-earphone"></span><a type="tel">202-340-5498</a></p>
+            <p class="booking btn btn-primary"><span class="glyphicon glyphicon-calendar"></span><a href="http://hamptoninn3.hilton.com/en/hotels/virginia/hampton-inn-and-suites-charlottesville-at-the-university-CHOMSHX/index.html">Book a Room</a></p>
+          </div>
+        </div>
+      </section>
+      <section id="ceremony" class="ceremony">
+        <h2 class="fancy"><span>Ceremony & Reception</span></h2>
+        <div class="col-md-4 col-md-offset-4">
+          <p class="text-size-1">We’ll tie the knot and celebrate directly following, at <a href="http://www.basicjoy.com/wordpress/bellehaven-on-the-james/">Belle Haven</a> in Scottsville, VA.</p>
+          <p class="text-size-2">More details about the ceremony and festivities coming soon!</p>
+        </div>
+      </section>
+      <section id="favorites" class="favorites">
+        <div class="wrap">
+          <h2 class="fancy"><span>Things To Do</span></h2>
+          <div class="col-md-4 col-md-offset-1">
+            <p class="lead">We delighted and honored that you’re considering joining us next summer!</p>
+            <p class="text-size-2">Whether you plan on spending a few extra days in the area, or making a quick trip of it, we want to share some of our favorite spots to visit and things to do.</p>
+            <p class="text-size-2">With the exception of the day trips, everything is within walking distance of the downtown area.</p>
+          </div>
+          <div class="col-md-3 col-md-offset-1 text-size-2">
+            <h3>Food and Drink</h3>
+            <ul>
+              <li><a href="#">C&O</a></li>
+              <li><a href="#">Commonwealth Skybar</a></li>
+              <li><a href="#">Cinema Taco</a></li>
+              <li><a href="#">The Whiskey Jar</a></li>
+              <li><a href="#">Bluegrass Grill & Diner</a></li>
+              <li><a href="#">Blue Moon Diner</a></li>
+              <li><a href="#">ACE Biscuit & BBQ</a></li>
+              <li><a href="#">Positively 4th St.</a></li>
+            </ul>
+            <h3>Entertainment</h3>
+            <ul>
+              <li><a href="#">The Southern</a></li>
+              <li><a href="#">Jefferson Theater</a></li>
+              <li><a href="#">Charlottesville Pavilion</a></li>
+              <li><a href="#">Vinegar Hill Theater</a></li>
+              <li><a href="#">Live Arts</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 text-size-2">
+            <h3>Shopping</h3>
+            <ul>
+              <li><a href="#">Rock, Paper, Scissors</a></li>
+              <li><a href="#">Bittersweet</a></li>
+              <li><a href="#">Roxie Daisy</a></li>
+              <li><a href="#">Melody Supreme</a></li>
+              <li><a href="#">Sidetracks Records</a></li>
+              <li><a href="#">Low Vintage</a></li>
+              <li><a href="#">Ike's Underground</a></li>
+              <li><a href="#">Eloise</a></li>
+            </ul>
+            <h3>Day Trips</h3>
+            <ul>
+              <li><a href="#">Monticello</a></li>
+              <li><a href="#">Veritas Vineyard</a></li>
+              <li><a href="#">Blue Mountain Brewery</a></li>
+              <li><a href="#">James River State Park</a></li>
+              <li><a href="#">James River Swimming Hole</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="registry" class="registry">
+        <h2 class="fancy"><span>Registry</span></h2>
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-4">
+            <p class="lead">Registries have been created at <a href="http://www1.macys.com/registry/wedding/guest/?registryId=2132835" title="Go to our Macy's registry">Macy’s</a> and <a href="http://www.crateandbarrel.com/Gift-Registry/Katel-LeDu-and-Jon-Long/r5102740">Crate & Barrel</a>. Both can be found on line or in-store under either one of our names.</p>
+          </div>
+        </div>
+        <div class="row thumbnails"><a href="#"><img src="images/macys.gif" alt="Macy's Logo" class="img-thumbnail"></a><a href="#"><img src="images/crateandbarrel.gif" alt="Macy's Logo" class="img-thumbnail"></a></div>
+      </section>
+    </div><!-- build:js(public) js/all.min.js -->
+    <script src="/components/jquery/jquery.min.js"></script>
+    <script src="/components/bootstrap/js/affix.js"></script>
+    <script src="/components/bootstrap/js/collapse.js"></script>
+    <script src="/components/bootstrap/js/scrollspy.js"></script>
+    <script src="/components/FitText.js/jquery.fittext.js"></script>
+    <script src="/js/main.js"></script><!-- endbuild -->
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- build:css(public) css/all.min.css -->
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/screen.css"><!-- endbuild -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One|Sacramento|Lato|Open+Sans"><!--[if lte IE 8]>
+     <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.ie.css' rel='stylesheet' >
+    <![endif]-->
+  </head>
+  <body>
+    <nav id="nav" role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target="#collapsed-navbar" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      </div>
+      <div id="collapsed-navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#accommodations">Accommodations</a></li>
+          <li><a href="#ceremony">Ceremony</a></li>
+          <li><a href="#favorites">Things to Do</a></li>
+          <li><a href="#registry">Gifts</a></li>
+          <li class="home"><a href="#hero">Katel & Jon</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="site-wrapper">
+    </div><!-- build:js(public) js/all.min.js -->
+    <script src="/components/jquery/jquery.min.js"></script>
+    <script src="/components/bootstrap/js/affix.js"></script>
+    <script src="/components/bootstrap/js/collapse.js"></script>
+    <script src="/components/bootstrap/js/scrollspy.js"></script>
+    <script src="/components/FitText.js/jquery.fittext.js"></script>
+    <script src="/js/main.js"></script><!-- endbuild -->
+  </body>
+</html>
+
+
+<nav id="nav" role="navigation" class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-header">
+    <button type="button" data-toggle="collapse" data-target="#collapsed-navbar" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+  </div>
+  <div id="collapsed-navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="#accommodations">Accommodations</a></li>
+      <li><a href="#ceremony">Ceremony</a></li>
+      <li><a href="#favorites">Things to Do</a></li>
+      <li><a href="#registry">Gifts</a></li>
+      <li class="home"><a href="#hero">Katel & Jon</a></li>
+    </ul>
+  </div>
+</nav>
