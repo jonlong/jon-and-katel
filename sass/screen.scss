@@ -1,6 +1,492 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* ============================================================
+jonandkatel.com SCSS
 
-// @import "compass/reset";
+/* ------------------------------------------------------------
+Imports
+------------------------------------------------------------ */
+
+@import 'compass/css3';
+// @import 'sprites/general/*.png';
+@import 'compass/utilities/sprites/sprite-img';
+@import "partials/utilities";
+
+/* ------------------------------------------------------------
+Variables
+------------------------------------------------------------ */
+
+$blue: blue;
+$white: #fff;
+$sans: 'Lato', sans-serif;
+$copy: #333;
+
+// Colors
+$degree1: #667D85;
+$degree2: #AB878B;
+$degree3: #E5B19B;
+$degree4: #FCCEAC;
+$degree5: #EFDFBB;
+$degree6: #F6F1ED;
+$degree7: #fff;
+
+/* ------------------------------------------------------------
+Mixins
+------------------------------------------------------------ */
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 650px)  { @content; }
+  }
+}
+
+/* ------------------------------------------------------------
+Type
+------------------------------------------------------------ */
+
+body {
+  font-family: $sans;
+  color: $copy;
+}
+
+h1 {
+  color: $degree1;
+}
+
+h2 {
+  font-family: 'Sacramento', cursive;
+  text-transform: lowercase;
+  text-align: center;
+  font-size: 40px;
+  color: $degree1;
+  padding: 100px 0;
+  position: relative;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Nixie One', cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+p, li {
+  font-family: 'Nixie One', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  font-weight: bold;
+  letter-spacing: -.8px;
+}
+
+.text-size-1 {
+  font-weight: normal;
+  font-size: 35px;
+  display: block;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.text-size-2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.lead {
+  @extend .text-size-2;
+  strong {
+    @extend .text-size-1;
+  }
+}
+
+.fancy {
+  line-height: 0;
+  text-align: center;
+  span {
+    display: inline-block;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      border-bottom: 1px solid $degree1;
+      // border-top: 1px solid $degree1;
+      top: 0;
+      width: 1000px;
+    }
+    &:before {
+      right: 100%;
+      margin-right: 15px;
+    }
+    &:after {
+      left: 100%;
+      margin-left: 15px;
+    }
+  }
+}
+
+.nav li {
+  font-family: 'Sacramento', cursive;
+  text-transform: lowercase;
+  font-size: 35px;
+  a {
+    font-weight: normal;
+  }
+}
+
+
+/* ------------------------------------------------------------
+Layout
+------------------------------------------------------------ */
+
+.full-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+section {
+  @extend .clearfix;
+  padding-top: 70px;
+  margin-top: -70px;
+  @include breakpoint(medium) {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+.row {
+  margin: 0;
+}
+
+.navbar {
+  @include transition(box-shadow 0.2s);
+  text-align: center;
+  background: #fff;
+  border-bottom: 0;
+  .navbar-toggle {
+    float: left;
+    margin: 15px;
+  }
+  .nav {
+    float: none;
+    li {
+      display: inline-block;
+      float: none;
+      @include breakpoint(medium) {
+        display: block;
+      }
+      a {
+        padding: 30px 15px;
+        display: inline-block;
+      }
+      &.active a {
+        background: none;
+        color: #428bca;
+        &:hover {
+          background: none;
+          color: #428bca;
+        }
+      }
+      &:before {
+        content: '•';
+        display: inline-block;
+        vertical-align: sub;
+        @include breakpoint(medium) {
+          display: none;
+          top: 0 !important;
+        }
+      }
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .home {
+      display: none;
+    }
+  }
+  &.navbar-collapse {
+    border-color: transparent;
+    @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.10));
+    @include breakpoint(medium) {
+      border-bottom: 1px solid transparent;
+      border-color: #e7e7e7;
+    }
+  }
+  &.affix-top {
+    position: relative;
+  }
+  &.affix {
+    @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.10));
+    position: fixed;
+    top: 0!important;
+  }
+}
+
+.navbar.affix-top, .navbar {
+  @include breakpoint(medium) {
+    position: fixed;
+    top: 0 !important;
+  }
+}
+
+.affix + .site-wrapper {
+  padding-top: 100px
+}
+
+/* ------------------------------------------------------------
+Base
+------------------------------------------------------------ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $sans;
+}
+
+/* ------------------------------------------------------------
+Hero
+------------------------------------------------------------ */
+
+.ri {
+  position: absolute;
+  max-width: 80%;
+  top: 10%;
+  left: 10%;
+}
+
+.ri:empty {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.lteie8 {
+  img.ri {
+    position: absolute;
+    max-width: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  img.ri { max-width: 90%; }
+}
+
+@media screen and (orientation: landscape) {
+  img.ri { max-height: 90%; }
+}
+
+/* ------------------------------------------------------------
+Accommodations
+------------------------------------------------------------ */
+
+.accommodations {
+  header {
+    @extend .clearfix;
+    margin-bottom: 50px;
+  }
+}
+
+.hotels {
+  padding: 0;
+  @include box-shadow(-2px 0px 0px 0px rgba(0, 0, 0, 0.10));
+}
+
+.hotel {
+  cursor: pointer;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,.3);
+  color: lighten(#91D1FF, 28%);
+  @include transition(all 0.3s ease-in-out);
+  .btn {
+    display: inline-block;
+    margin: 0 5px;
+    &.address {
+      margin-left: 0;
+    }
+  }
+  .btn-primary {
+    color: #fff;
+  }
+  .btn-outline-inverse {
+      color: #428bca;
+      background: rgba(255,255,255,.6);
+      // border: 1px solid darken(#91D1FF, 20%);
+    a {
+      color: #428bca;
+    }
+
+    &:hover {
+      background: #fff;
+    }
+  }
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  span {
+    margin-right: 8px;
+  }
+  p {
+    margin: 20px 0 15px;
+    line-height: 1.4;
+  }
+  h3 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  img {
+    margin-bottom: 15px;
+  }
+  footer {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  &:hover {
+    background: darken(#91D1FF, 25%);
+  }
+  &:first-child {
+    border-top: 0;
+    // padding-top: 0;
+  }
+}
+
+.omni {
+  background: darken(#91D1FF, 5%);
+}
+
+.hampton-inn {
+  background: darken(#91D1FF, 10%);
+}
+
+.hampton-suites {
+  background: darken(#91D1FF, 15%);
+}
+
+/* ------------------------------------------------------------
+Ceremony
+------------------------------------------------------------ */
+
+.ceremony {
+  background: url(/images/jamesriver.jpg) no-repeat center 380px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 70px;
+  p {
+    color: #fff;
+    text-align: center;
+  }
+  .img {
+    padding-right: 0;
+  }
+  .text-size-1 {
+    color: $degree1;
+    margin-bottom: 560px;
+  }
+  .col-md-4 {
+    margin-bottom: 30px;
+  }
+  h2 {
+    // span {
+    //   color: #fff;
+    //   &:before,
+    //   &:after {
+    //     border-color: #fff;
+    //   }
+    // }
+  }
+}
+
+/* ------------------------------------------------------------
+Things to Do
+------------------------------------------------------------ */
+
+.favorites {
+  margin-top: -140px;
+  color: #fff;
+  h2, h3, p, li {
+    // color: #655C6F;
+    color: darken(#A29AAA, 30%);
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  a {
+    color: rgba(255,255,255,.75);
+  }
+  ul {
+    margin-left: -2em;
+    margin-bottom: 25px;
+  }
+  li {
+    margin-top: 5px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  span {
+    &:before, &:after {
+      border-color: darken(#A29AAA, 30%);
+    }
+  }
+  .wrap {
+    @extend .clearfix;
+    background: #A29AAA;
+    padding-bottom: 40px;
+  }
+  .lead {
+    @extend .text-size-1;
+    margin-bottom: 30px;
+  }
+}
+
+/* ------------------------------------------------------------
+Registry
+------------------------------------------------------------ */
+
+.registry {
+  margin-bottom: 80px;
+  .lead {
+    margin-bottom: 40px;
+  }
+  .thumbnails {
+    text-align: center;
+    a {
+      display: inline-block;
+      margin: 10px;
+    }
+  }
+}

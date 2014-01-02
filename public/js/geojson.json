@@ -1,0 +1,42 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "properties": {
+            "id": "omni",
+            "type": "hotel",
+            "title": "Omni Charlottesville",
+            "marker-size": "medium",
+            "marker-symbol": "lodging"
+        },
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-78.4849821,38.031439]
+        }
+    },{
+        "properties": {
+            "id": "hampton-inn",
+            "type": "hotel",
+            "title": "Hampton Inn",
+            "marker-size": "medium",
+            "marker-symbol": "lodging"
+        },
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-78.4886727,38.0626743]
+        }
+    },{
+        "properties": {
+            "id": "hampton-inn-suites",
+            "title": "Hampton Inn and Suites",
+            "marker-size": "medium",
+            "marker-symbol": "lodging"
+        },
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-78.4943703,38.0322372]
+        }
+    }]
+}
