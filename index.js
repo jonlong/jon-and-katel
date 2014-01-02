@@ -14,8 +14,10 @@ var env = process.env.NODE_ENV || 'development';
 var config = require('./config');
 
 /* Express config */
-app.set('view engine', 'jade');
+
+app.engine('.html', require('ejs').__express);
 app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
 app.use(express.cookieParser());
 app.use(express.bodyParser());
 app.use(express.methodOverride());

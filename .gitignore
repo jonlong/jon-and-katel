@@ -1,3 +1,5 @@
 .DS_Store
 .sass-cache
 public/components
+public/dist
+.tmp

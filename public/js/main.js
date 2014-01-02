@@ -22,6 +22,14 @@ var JK = function() {
     }
   ];
 
+  // Breakpoints
+
+  var breakpoints = {
+    small: 500,
+    medium: 768,
+    large: 1400
+  };
+
   // DOM Elements
 
   var hero = $('#hero');
@@ -34,20 +42,6 @@ var JK = function() {
 
   // Element plugins
 
-  $.fn.centerElement = function(offsetX, offsetY) {
-    if (!offsetX) {
-      offsetX = 0;
-    }
-    if (!offsetY) {
-      offsetY = 0;
-    }
-    this.css({
-      position:'absolute',
-      left: ($(window).width() - this.outerWidth())/2 + offsetX,
-      top: ($(window).height() - this.outerHeight())/2 + offsetY
-    });
-  };
-
   $.fn.setMinHeight = function(height) {
     this.css('min-height', height);
   };
@@ -55,24 +49,23 @@ var JK = function() {
   // Events
 
   nav.find('a').on('click', function(e) {
-   var hash = this.hash;
+    var hash = this.hash;
 
-   e.preventDefault();
-
-   $('html, body').animate({
+    $('html, body').animate({
        scrollTop: $(this.hash).offset().top
      }, 300, function(){
        window.location.hash = hash;
      });
 
-});
+    e.preventDefault();
+  });
 
   // Private functions
 
   var setHeroHeight = function() {
     var height = $(window).height();
     hero.setMinHeight(height);
-  }
+  };
 
   var setMapHeight = function() {
     var height = hotels.height();
@@ -85,7 +78,7 @@ var JK = function() {
 
   var loadMap = function() {
     $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyBRZBM7HqxhnRVjKBFX_wkXTgFWTrsHdUc&sensor=false&callback=JK.drawMap');
-  }
+  };
 
   var initNav = function() {
     var height = $(window).height() - (nav.height() * 2);
@@ -108,8 +101,15 @@ var JK = function() {
     // Public methods
 
     init : function() {
+      var width = $(window).width();
+
+      if (width > breakpoints.medium) {
+        initNav();
+        loadMap();
+        setMapHeight();
+      }
+
       JK.drawLayout();
-      loadMap();
       $(window).resize(function() {
         JK.drawLayout();
       });
@@ -117,10 +117,7 @@ var JK = function() {
 
     drawLayout : function() {
       setHeroHeight();
-      setMapHeight();
-      initNav();
       fitText();
-      crest.centerElement(0, -nav.height());
     },
 
     drawMap : function() {

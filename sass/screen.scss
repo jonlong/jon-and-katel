@@ -13,6 +13,7 @@ Imports
 /* ------------------------------------------------------------
 Variables
 ------------------------------------------------------------ */
+
 $blue: blue;
 $white: #fff;
 $sans: 'Lato', sans-serif;
@@ -27,16 +28,21 @@ $degree5: #EFDFBB;
 $degree6: #F6F1ED;
 $degree7: #fff;
 
-// $degree1: #5C6043;
-// $degree2: #AB878B;
-// $degree3: #E5B19B;
-// $degree4: #FCCEAC;
-// $degree5: #EFDFBB;
-// $degree6: #F6F1ED;
-// $degree7: #fff;
+/* ------------------------------------------------------------
+Mixins
+------------------------------------------------------------ */
 
-// pink
-// #F3A2A2
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 650px)  { @content; }
+  }
+}
 
 /* ------------------------------------------------------------
 Type
@@ -156,10 +162,18 @@ section {
   @extend .clearfix;
   padding-top: 70px;
   margin-top: -70px;
+  @include breakpoint(medium) {
+    padding-top: 0;
+    margin-top: 0;
+  }
 }
 
 body, html {
   overflow-x: hidden;
+}
+
+.row {
+  margin: 0;
 }
 
 .navbar {
@@ -167,14 +181,18 @@ body, html {
   text-align: center;
   background: #fff;
   border-bottom: 0;
-  &.affix {
-    @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.10));
+  .navbar-toggle {
+    float: left;
+    margin: 15px;
   }
   .nav {
     float: none;
     li {
       display: inline-block;
       float: none;
+      @include breakpoint(medium) {
+        display: block;
+      }
       a {
         padding: 30px 15px;
         display: inline-block;
@@ -191,6 +209,10 @@ body, html {
         content: '•';
         display: inline-block;
         vertical-align: sub;
+        @include breakpoint(medium) {
+          display: none;
+          top: 0 !important;
+        }
       }
       &:first-child {
         &:before {
@@ -202,12 +224,28 @@ body, html {
       display: none;
     }
   }
+  &.navbar-collapse {
+    border-color: transparent;
+    @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.10));
+    @include breakpoint(medium) {
+      border-bottom: 1px solid transparent;
+      border-color: #e7e7e7;
+    }
+  }
   &.affix-top {
     position: relative;
   }
   &.affix {
+    @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.10));
     position: fixed;
     top: 0!important;
+  }
+}
+
+.navbar.affix-top, .navbar {
+  @include breakpoint(medium) {
+    position: fixed;
+    top: 0 !important;
   }
 }
 
@@ -229,12 +267,41 @@ body {
 Hero
 ------------------------------------------------------------ */
 
-.crest {
-  background: url(/images/crest.png) no-repeat 0 0;
-  width: 600px;
-  height: 414px;
+.ri {
+  position: absolute;
+  max-width: 80%;
+  top: 10%;
+  left: 10%;
 }
 
+.ri:empty {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.lteie8 {
+  img.ri {
+    position: absolute;
+    max-width: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  img.ri { max-width: 90%; }
+}
+
+@media screen and (orientation: landscape) {
+  img.ri { max-height: 90%; }
+}
 
 /* ------------------------------------------------------------
 Accommodations
@@ -414,5 +481,12 @@ Registry
   margin-bottom: 80px;
   .lead {
     margin-bottom: 40px;
+  }
+  .thumbnails {
+    text-align: center;
+    a {
+      display: inline-block;
+      margin: 10px;
+    }
   }
 }

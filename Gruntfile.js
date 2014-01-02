@@ -1,11 +1,13 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-concurrent');
-  grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-express-server');
+  grunt.loadNpmTasks('grunt-usemin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Project configuration.
   grunt.initConfig({
@@ -19,26 +21,7 @@ module.exports = function(grunt) {
         images: 'public/images',
         js: 'public/js',
         sass: './sass',
-      }
-    },
-
-    // Runs multiple grunt tasks in parallel
-    concurrent: {
-      dev: {
-        tasks: ['connect', 'watch'],
-        options: {
-          logConcurrentOutput: true
-        }
-      }
-    },
-
-    // Grunticon
-    grunticon: {
-      svg: {
-        options: {
-          src: '<%= _meta.dirs.images %>/svg',
-          dest: '<%= _meta.dirs.css %>/icons'
-        }
+        views: './views'
       }
     },
 
@@ -49,6 +32,7 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
+          node_env: 'development',
           port: '<%= _meta.config %>'
         }
       },
@@ -75,10 +59,7 @@ module.exports = function(grunt) {
       },
       express: {
         files: ['/*.js'],
-        tasks: ['express:dev'],
-        options: {
-          nospawn: true
-        }
+        tasks: ['express:dev']
       },
       sass: {
         files: ['<%= _meta.dirs.sass %>/**/*.scss'],
@@ -88,14 +69,34 @@ module.exports = function(grunt) {
         files: ['public/**/*', 'views/*.jade'],
         tasks: []
       }
-      // grunticon: {
-      //   files: ['<%= _meta.dirs.images %>/svg/**'],
-      //   tasks: ['grunticon:svg']
-      // }
+    },
+
+    copy: {
+      views: {
+        expand: true,
+        cwd: './<%= _meta.dirs.views %>',
+        src: ['scripts.html', 'stylesheets.html'],
+        dest: '<%= _meta.dirs.views %>/dist/'
+      }
+    },
+
+    useminPrepare: {
+      html: ['<%= _meta.dirs.views %>/dist/scripts.html', '<%= _meta.dirs.views %>/dist/stylesheets.html'],
+      options: {
+        root: 'public',
+        dest: 'public'
+      }
+    },
+
+    usemin: {
+      options: {
+        assetsDirs: ['public']
+      },
+      html: ['<%= _meta.dirs.views %>/dist/scripts.html', '<%= _meta.dirs.views %>/dist/stylesheets.html']
     }
+
   });
 
-  grunt.registerTask('default', ['express:dev', 'watch']);
-  grunt.registerTask('dev', ['express:dev', 'watch']);
-  // grunt.registerTask('release', 'jekyll:prod');
+  grunt.registerTask('default', ['copy', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin']);
+  grunt.registerTask('dev', ['default', 'express:dev', 'watch']);
 };
