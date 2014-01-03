@@ -25,5 +25,11 @@
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-copy": "~0.5.0"
   },
-  "subdomain": "jonandkatel"
+  "subdomain": "jonandkatel",
+  "domains": [
+    "jonandkatel.com",
+    "www.jonandkatel.com",
+    "katelandjon.com",
+    "www.katelandjon.com"
+  ],
 }
