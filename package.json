@@ -1,6 +1,6 @@
 {
   "name": "jon-and-katel",
-  "version": "0.0.0-8",
+  "version": "0.0.0-12",
   "description": "Jon and Katel's wedding site",
   "main": "index.js",
   "author": "Jon Long",
@@ -9,7 +9,7 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "postdeploy": "grunt",
+    "predeploy": "grunt",
     "start": "node index.js"
   },
   "dependencies": {
