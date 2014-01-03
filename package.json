@@ -9,7 +9,7 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "predeploy": "grunt",
+    "postdeploy": "grunt",
     "start": "node index.js"
   },
   "dependencies": {
