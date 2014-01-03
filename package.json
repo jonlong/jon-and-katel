@@ -1,12 +1,16 @@
 {
   "name": "jon-and-katel",
-  "version": "0.0.0",
+  "version": "0.0.0-6",
   "description": "Jon and Katel's wedding site",
   "main": "index.js",
   "author": "Jon Long",
   "license": "BSD",
   "engines": {
-    "node": "0.10.10"
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "predeploy": "grunt",
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "~3.4.5",
@@ -20,5 +24,6 @@
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-copy": "~0.5.0"
-  }
+  },
+  "subdomain": "jonandkatel"
 }
