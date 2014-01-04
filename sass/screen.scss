@@ -37,7 +37,7 @@ Mixins
     @media (max-width: 1300px) { @content; }
   }
   @else if $point == medium {
-    @media (max-width: 768px) { @content; }
+    @media (max-width: 767px) { @content; }
   }
   @else if $point == small {
     @media (max-width: 320px)  { @content; }

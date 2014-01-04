@@ -63,7 +63,7 @@ var JK = function() {
   // Private functions
 
   var setHeroHeight = function() {
-    var height = $(window).height();
+    var height = window.innerHeight;
     hero.setMinHeight(height);
   };
 
@@ -81,7 +81,7 @@ var JK = function() {
   };
 
   var initNav = function() {
-    var height = $(window).height() - (nav.height() * 2);
+    var height = window.innerHeight - (86 * 2);
 
     body.scrollspy({
       target: '.navbar'
@@ -101,7 +101,7 @@ var JK = function() {
     // Public methods
 
     init : function() {
-      var width = $(window).width();
+      var width = window.innerWidth;
 
       if (width >= breakpoints.medium) {
         initNav();
