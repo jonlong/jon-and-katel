@@ -34,13 +34,13 @@ Mixins
 
 @mixin breakpoint($point) {
   @if $point == large {
-    @media (max-width: 1600px) { @content; }
+    @media (max-width: 1300px) { @content; }
   }
   @else if $point == medium {
     @media (max-width: 768px) { @content; }
   }
   @else if $point == small {
-    @media (max-width: 650px)  { @content; }
+    @media (max-width: 320px)  { @content; }
   }
 }
 
@@ -317,6 +317,9 @@ Accommodations
   header {
     @extend .clearfix;
     margin-bottom: 50px;
+    @include breakpoint(small) {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -334,6 +337,10 @@ Accommodations
   .btn {
     display: inline-block;
     margin: 0 5px;
+    @media (max-width: 1365px) {
+      display: block;
+      margin: 0 0 10px
+    }
     &.address {
       margin-left: 0;
     }
@@ -420,6 +427,16 @@ Ceremony
   .text-size-1 {
     color: $degree1;
     margin-bottom: 560px;
+    @include breakpoint(medium) {
+      margin-bottom: 50px;
+    }
+  }
+  .text-size-2 {
+    @include breakpoint(medium) {
+      margin-bottom: 520px;
+      color: $degree1;
+      font-size: 16px;
+    }
   }
   .col-md-4 {
     margin-bottom: 30px;
@@ -454,7 +471,7 @@ Things to Do
     color: rgba(255,255,255,.75);
   }
   ul {
-    margin-left: -2em;
+    margin-left: -1em;
     margin-bottom: 25px;
   }
   li {
@@ -476,6 +493,12 @@ Things to Do
   .lead {
     @extend .text-size-1;
     margin-bottom: 30px;
+  }
+  .col-md-6 {
+    @media (max-width: 992px) {
+      padding: 0;
+      margin-top: 40px;
+    }
   }
 }
 
