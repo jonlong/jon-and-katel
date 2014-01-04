@@ -103,7 +103,7 @@ var JK = function() {
     init : function() {
       var width = $(window).width();
 
-      if (width > breakpoints.medium) {
+      if (width >= breakpoints.medium) {
         initNav();
         loadMap();
         setMapHeight();
