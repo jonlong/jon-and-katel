@@ -57,6 +57,10 @@ var JK = function() {
        window.location.hash = hash;
      });
 
+    if (window.innerWidth < breakpoints.medium) {
+      nav.find('#collapsed-navbar').removeClass("in").addClass("collapse");
+    }
+
     e.preventDefault();
   });
 
