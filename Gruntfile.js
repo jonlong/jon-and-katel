@@ -77,6 +77,12 @@ module.exports = function(grunt) {
         cwd: './<%= _meta.dirs.views %>',
         src: ['scripts.html', 'stylesheets.html'],
         dest: '<%= _meta.dirs.views %>/dist/'
+      },
+      fonts: {
+        expand: true,
+        cwd: './<%= _meta.dirs.public %>/components/bootstrap/dist/fonts',
+        src: ['**/*'],
+        dest: '<%= _meta.dirs.public %>/dist/fonts/'
       }
     },
 
