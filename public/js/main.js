@@ -153,6 +153,10 @@ var JK = function() {
         infoWindow.setContent(places[index].name);
         infoWindow.open(map, markers[index]);
       });
+
+      hotels.find('.btn').on('click', function(e) {
+        e.stopPropagation();
+      });
     }
   };
 }();
