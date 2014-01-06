@@ -75,12 +75,12 @@ h3 {
   margin: 0;
 }
 
-p, li {
+p, li, .hotels .btn {
   font-family: 'Nixie One', sans-serif;
   font-size: 16px;
 }
 
-a {
+a,  {
   font-weight: bold;
   letter-spacing: -.8px;
 }
@@ -335,6 +335,8 @@ Accommodations
   color: lighten(#91D1FF, 28%);
   @include transition(all 0.3s ease-in-out);
   .btn {
+    @extend a;
+    font-size: 14px;
     display: inline-block;
     margin: 0 5px;
     @media (max-width: 1365px) {
@@ -344,21 +346,21 @@ Accommodations
     &.address {
       margin-left: 0;
     }
+    &.btn-outline-inverse {
+        color: #428bca;
+        background: rgba(255,255,255,.6);
+        // border: 1px solid darken(#91D1FF, 20%);
+      span {
+        color: #428bca;
+      }
+
+      &:hover {
+        background: #fff;
+      }
+    }
   }
   .btn-primary {
     color: #fff;
-  }
-  .btn-outline-inverse {
-      color: #428bca;
-      background: rgba(255,255,255,.6);
-      // border: 1px solid darken(#91D1FF, 20%);
-    a {
-      color: #428bca;
-    }
-
-    &:hover {
-      background: #fff;
-    }
   }
   a {
     color: #fff;
