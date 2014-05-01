@@ -8,10 +8,8 @@ var routes = function(app, data) {
   });
 
   // Index Page
-  app.get('/map', function(req, res) {
-    res.render('map', {
-      title: 'Map'
-    });
+  app.get('/rsvp', function(req, res) {
+    res.render('rsvp');
   });
 
   // app.get('/:page', pjaxRewrite, function(req, res, next){

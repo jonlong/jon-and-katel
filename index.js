@@ -2,8 +2,10 @@
  * Module dependencies.
  */
 
+var subdomain = require('express-subdomain');
 var express = require('express');
 var app = express();
+var router = express.Router();
 
 /**
  * Application
@@ -18,13 +20,24 @@ var config = require('./config');
 app.engine('.html', require('ejs').__express);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
-app.use(express.cookieParser());
-app.use(express.bodyParser());
-app.use(express.methodOverride());
 app.use(express.static(__dirname + '/public'));
 
-// Routes
-require('./routes')(app);
+/* Routes */
+
+//RSVP route
+router.get('/', function(req, res) {
+  res.render('rsvp');
+});
+
+// RSVP subdomain
+app.use(subdomain('rsvp', router));
+
+// Index route
+app.get('/', function(req, res) {
+  res.render('index', {
+    title: 'Index'
+  });
+});
 
 // Start 'er up
 app.listen(config.web.port);

@@ -1,6 +1,6 @@
 {
   "name": "jon-and-katel",
-  "version": "0.0.0-24",
+  "version": "0.0.0-25",
   "description": "Jon and Katel's wedding site",
   "main": "index.js",
   "author": "Jon Long",
@@ -13,7 +13,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "~3.4.5",
     "ejs": "~0.8.5",
     "grunt": "~0.4.2",
     "grunt-express-server": "~0.4.5",
@@ -23,13 +22,17 @@
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-contrib-copy": "~0.5.0"
+    "grunt-contrib-copy": "~0.5.0",
+    "express-subdomain": "0.0.2",
+    "express": "~4.1.1"
   },
   "subdomain": "jonandkatel",
   "domains": [
     "jonandkatel.com",
     "www.jonandkatel.com",
     "katelandjon.com",
-    "www.katelandjon.com"
+    "www.katelandjon.com",
+    "rsvp.katelandjon.com",
+    "rsvp.jonandkatel.com"
   ]
 }
